@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dee Decors – Handcrafted Indian Treasures</title>
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Dee Decors Journey – My Story as a Kolam Artist</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap"
       rel="stylesheet"
@@ -26,6 +32,7 @@
         margin: 0;
         padding: 0;
       }
+
       body {
         font-family: "Lato", sans-serif;
         background-color: var(--cream);
@@ -57,6 +64,7 @@
         position: relative;
         overflow: hidden;
       }
+
       .kolam-top::before {
         content: "";
         position: absolute;
@@ -81,6 +89,7 @@
         text-align: center;
         position: relative;
       }
+
       .header-border {
         height: 6px;
         background: repeating-linear-gradient(
@@ -92,10 +101,12 @@
         );
         margin-bottom: 20px;
       }
+
       header img.logo {
         height: 120px;
         margin-bottom: 8px;
       }
+
       header .tagline {
         font-family: "Playfair Display", serif;
         font-style: italic;
@@ -104,6 +115,7 @@
         margin-bottom: 4px;
         letter-spacing: 0.5px;
       }
+
       header .subtitle {
         font-family: "Playfair Display", serif;
         font-weight: 600;
@@ -112,6 +124,7 @@
         letter-spacing: 2px;
         text-transform: uppercase;
       }
+
       .header-ornament {
         color: var(--gold);
         font-size: 18px;
@@ -119,566 +132,406 @@
         letter-spacing: 6px;
       }
 
-      /* ── SECTION BADGE (like flyer) ──────────── */
-      .section-badge {
-        display: inline-block;
-        background: var(--red-accent);
-        color: #fff8e1;
+      /* ── MAIN CONTENT ────────────────────────── */
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      .intro-section {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .intro-section h1 {
         font-family: "Playfair Display", serif;
+        font-size: 32px;
+        color: var(--brown);
+        margin-bottom: 16px;
         font-weight: 600;
-        font-size: 13px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        padding: 6px 28px;
-        border: 2px solid var(--gold);
-        border-radius: 2px;
+      }
+
+      .intro-section p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text);
+        margin-bottom: 12px;
+      }
+
+      .intro-highlight {
+        font-style: italic;
+        color: var(--red-accent);
+      }
+
+      /* ── TIMELINE ────────────────────────────── */
+      .timeline {
         position: relative;
       }
-      .section-badge::before,
-      .section-badge::after {
-        content: "✦";
-        color: var(--gold);
+
+      .timeline-year {
+        text-align: center;
+        margin: 50px 0 40px;
+        position: relative;
+      }
+
+      .timeline-year h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 28px;
+        color: var(--red-accent);
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+        background: var(--cream);
+      }
+
+      .timeline-year::before {
+        content: "";
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        font-size: 10px;
-      }
-      .section-badge::before {
-        left: 8px;
-      }
-      .section-badge::after {
-        right: 8px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--gold);
+        z-index: 0;
       }
 
-      /* ── FILTER BAR ──────────────────────────── */
-      .filter-bar {
-        background: var(--cream2);
-        border-bottom: 1.5px solid var(--gold);
-        padding: 16px 20px;
-        position: sticky;
+      .timeline-year h2::before,
+      .timeline-year h2::after {
+        content: "✦";
+        color: var(--gold);
+        margin: 0 8px;
+      }
+
+      /* ── TIMELINE EVENTS ─────────────────────── */
+      .timeline-events {
+        position: relative;
+        padding-left: 40px;
+      }
+
+      .timeline-events::before {
+        content: "";
+        position: absolute;
+        left: 10px;
         top: 0;
-        z-index: 100;
-        box-shadow: 0 2px 8px rgba(74, 26, 10, 0.08);
-      }
-      .filter-label {
-        font-size: 11px;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        color: var(--muted);
-        margin-bottom: 8px;
-      }
-      .filter-groups {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-      }
-      .filter-divider {
-        width: 1px;
-        height: 24px;
-        background: var(--brown);
-        opacity: 0.2;
-      }
-      .chip {
-        padding: 5px 14px;
-        border: 1.5px solid var(--brown);
-        border-radius: 20px;
-        font-size: 13px;
-        font-family: "Lato", sans-serif;
-        color: var(--brown);
-        background: transparent;
-        cursor: pointer;
-        transition: all 0.18s ease;
-        white-space: nowrap;
-      }
-      .chip:hover {
-        background: var(--cream2);
-        border-color: var(--gold);
-      }
-      .chip.active {
-        background: var(--brown);
-        color: #fff8e1;
-        border-color: var(--brown);
-      }
-      .chip.price.active {
-        background: var(--red-accent);
-        border-color: var(--red-accent);
-        color: #fff;
+        bottom: 0;
+        width: 3px;
+        background: linear-gradient(
+          180deg,
+          var(--gold) 0%,
+          var(--red-accent) 100%
+        );
       }
 
-      /* ── PRODUCT GRID ────────────────────────── */
-      main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 28px 20px 60px;
+      .event {
+        margin-bottom: 45px;
+        position: relative;
       }
-      .section-header {
-        text-align: center;
-        margin-bottom: 24px;
+
+      .event::before {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--cream2);
+        border: 3px solid var(--gold);
+        box-shadow: 0 0 0 4px var(--cream);
       }
-      .results-count {
-        font-size: 12px;
-        color: var(--muted);
-        margin-top: 8px;
+
+      .event-date {
+        font-family: "Playfair Display", serif;
+        font-size: 16px;
+        color: var(--red-accent);
+        font-weight: 600;
+        margin-bottom: 8px;
         letter-spacing: 0.5px;
       }
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 18px;
+      .event-title {
+        font-family: "Playfair Display", serif;
+        font-size: 20px;
+        color: var(--brown);
+        font-weight: 600;
+        margin-bottom: 12px;
       }
 
-      .card {
-        background: #fff;
+      .event-location {
+        font-size: 13px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 16px;
+      }
+
+      .event-description {
+        font-size: 15px;
+        line-height: 1.7;
+        color: var(--text);
+        margin-bottom: 16px;
+      }
+
+      /* ── CAROUSEL ────────────────────────────── */
+      .carousel-container {
+        position: relative;
+        margin-top: 20px;
+        background: white;
         border: 1px solid var(--cream2);
         border-radius: 4px;
         overflow: hidden;
-        cursor: pointer;
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
         box-shadow: 0 2px 8px rgba(74, 26, 10, 0.07);
       }
-      .card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(74, 26, 10, 0.13);
-      }
-      .card-top {
-        height: 3px;
-        background: linear-gradient(
-          90deg,
-          var(--brown),
-          var(--gold),
-          var(--brown)
-        );
-      }
-      .card-img-wrap {
-        width: 100%;
-        aspect-ratio: 1;
-        overflow: hidden;
-        background: var(--cream);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-      .card-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-      .card:hover .card-img-wrap img {
-        transform: scale(1.04);
-      }
-      .card-img-wrap .no-img {
-        font-size: 48px;
-        opacity: 0.25;
-      }
-      .card-category {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background: var(--red-accent);
-        color: #fff;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        padding: 2px 8px;
-        border-radius: 2px;
-        text-transform: uppercase;
-      }
-      .card-body {
-        padding: 12px 14px 14px;
-        border-top: 1px solid var(--cream2);
-      }
-      .card-name {
-        font-family: "Playfair Display", serif;
-        font-size: 15px;
-        font-weight: 600;
-        color: var(--brown);
-        line-height: 1.3;
-        margin-bottom: 4px;
-      }
-      .card-desc {
-        font-size: 12px;
-        color: var(--muted);
-        line-height: 1.5;
-        margin-bottom: 8px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-      }
-      .card-footer {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-top: 8px;
-      }
-      .card-price {
-        font-family: "Playfair Display", serif;
-        font-size: 18px;
-        font-weight: 600;
-        color: var(--brown);
-      }
-      .card-btn {
-        font-size: 11px;
-        letter-spacing: 0.5px;
-        color: var(--gold);
-        border: 1px solid var(--gold);
-        padding: 4px 10px;
-        border-radius: 2px;
-        background: transparent;
-        cursor: pointer;
-        font-family: "Lato", sans-serif;
-        font-weight: 700;
-        text-transform: uppercase;
-        transition: all 0.15s;
-      }
-      .card-btn:hover {
-        background: var(--gold);
-        color: #fff;
-      }
 
-      .empty-state {
-        text-align: center;
-        padding: 60px 20px;
-        color: var(--muted);
-        grid-column: 1/-1;
-      }
-      .empty-state p {
-        font-family: "Playfair Display", serif;
-        font-size: 18px;
-        margin-bottom: 8px;
-      }
-      .empty-state small {
-        font-size: 13px;
-      }
-
-      /* ── MODAL ───────────────────────────────── */
-      .modal-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        background: rgba(74, 26, 10, 0.55);
-        z-index: 1000;
-        padding: 20px;
-        overflow-y: auto;
-        align-items: center;
-        justify-content: center;
-      }
-      .modal-overlay.open {
-        display: flex;
-      }
-      .modal {
-        background: var(--cream);
-        border-radius: 4px;
-        max-width: 1000px;
-        width: 100%;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 16px 48px rgba(74, 26, 10, 0.25);
-        animation: modalIn 0.22s ease;
-        margin: auto;
-      }
-      @keyframes modalIn {
-        from {
-          transform: translateY(20px);
-          opacity: 0;
-        }
-        to {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      .modal-top-bar {
-        height: 5px;
-        background: linear-gradient(
-          90deg,
-          var(--brown),
-          var(--gold),
-          var(--red-accent),
-          var(--gold),
-          var(--brown)
-        );
-      }
-      .modal-close {
-        position: absolute;
-        top: 14px;
-        right: 16px;
-        background: none;
-        border: none;
-        font-size: 22px;
-        color: var(--muted);
-        cursor: pointer;
-        line-height: 1;
-        z-index: 10;
-        padding: 2px 6px;
-        border-radius: 50%;
-        transition: background 0.15s;
-      }
-      .modal-close:hover {
-        background: var(--cream2);
-        color: var(--brown);
-      }
-      .modal-body {
-        display: flex;
-        flex-direction: column;
-      }
-      @media (min-width: 520px) {
-        .modal-body {
-          flex-direction: row;
-        }
-      }
-      .modal-img-wrap {
-        flex: 0 0 55%;
-        background: var(--cream2);
-        min-height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        position: relative;
-      }
-      .modal-img-wrap .no-img-lg {
-        font-size: 80px;
-        opacity: 0.2;
-      }
       .carousel {
-        width: 100%;
         position: relative;
+        width: 100%;
         overflow: hidden;
-        flex: 1;
-        min-height: 400px;
-        background: var(--cream2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
+
       .carousel-slide {
         display: none;
         width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        min-height: 300px;
+        background: var(--cream2);
         align-items: center;
         justify-content: center;
       }
+
       .carousel-slide.active {
         display: flex;
       }
+
       .carousel-slide img {
         width: 100%;
         height: 400px;
         object-fit: contain;
       }
-      .carousel-btn {
+
+      .carousel-slide.placeholder {
+        background: linear-gradient(
+          135deg,
+          var(--cream2) 0%,
+          var(--cream) 100%
+        );
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+
+      .carousel-nav {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: rgba(74, 26, 10, 0.55);
-        color: #fff8e1;
-        border: none;
-        width: 30px;
+        width: 40px;
         height: 40px;
-        cursor: pointer;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-        border-radius: 2px;
-        transition: background 0.15s;
-      }
-      .carousel-btn:hover {
-        background: rgba(74, 26, 10, 0.85);
-      }
-      .carousel-btn.prev {
-        left: 4px;
-      }
-      .carousel-btn.next {
-        right: 4px;
-      }
-      .carousel-dots {
-        display: flex;
-        gap: 6px;
-        justify-content: center;
-        padding: 6px 0;
-        background: var(--cream2);
-        width: 100%;
-      }
-      .carousel-dot {
-        width: 7px;
-        height: 7px;
-        border-radius: 50%;
-        background: var(--muted);
-        opacity: 0.35;
-        cursor: pointer;
-        transition: opacity 0.15s;
-        border: none;
-        padding: 0;
-      }
-      .carousel-dot.active {
-        opacity: 1;
-        background: var(--brown);
-      }
-      .modal-info {
-        flex: 1;
-        padding: 28px 24px 24px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-      .modal-category-badge {
-        display: inline-block;
-        background: var(--red-accent);
-        color: #fff;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        padding: 2px 10px;
-        border-radius: 2px;
-        text-transform: uppercase;
-        width: fit-content;
-      }
-      .modal-name {
-        font-family: "Playfair Display", serif;
-        font-size: 22px;
-        font-weight: 600;
-        color: var(--brown);
-        line-height: 1.25;
-      }
-      .modal-ornament {
-        color: var(--gold);
-        font-size: 14px;
-        letter-spacing: 4px;
-      }
-      .modal-desc {
-        font-size: 14px;
-        color: var(--muted);
-        line-height: 1.7;
-        flex: 1;
-      }
-      .modal-price-row {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-top: 4px;
-      }
-      .modal-price {
-        font-family: "Playfair Display", serif;
-        font-size: 28px;
-        font-weight: 600;
-        color: var(--brown);
-      }
-      .modal-price-note {
-        font-size: 12px;
-        color: var(--muted);
-      }
-      .modal-actions {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 8px;
-      }
-      .btn-primary {
-        display: block;
-        text-align: center;
-        padding: 12px 20px;
-        background: var(--brown);
+        background: rgba(74, 26, 10, 0.7);
         color: #fff8e1;
-        font-family: "Lato", sans-serif;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        border-radius: 2px;
         border: none;
         cursor: pointer;
-        transition: background 0.15s;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+        z-index: 10;
       }
-      .btn-primary:hover {
-        background: #3a1208;
+
+      .carousel-nav:hover {
+        background: rgba(74, 26, 10, 0.9);
       }
-      .btn-secondary {
-        display: block;
-        text-align: center;
-        padding: 10px 20px;
-        background: transparent;
-        color: var(--brown);
-        font-family: "Lato", sans-serif;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        border-radius: 2px;
-        border: 1.5px solid var(--brown);
+
+      .carousel-nav.prev {
+        left: 10px;
+      }
+
+      .carousel-nav.next {
+        right: 10px;
+      }
+
+      .carousel-indicators {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+      }
+
+      .indicator {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
         cursor: pointer;
-        transition: all 0.15s;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        transition: all 0.2s ease;
       }
-      .btn-secondary:hover {
-        background: var(--cream2);
+
+      .indicator.active {
+        background: var(--gold);
+        border-color: var(--gold);
+      }
+
+      .carousel-counter {
+        position: absolute;
+        top: 10px;
+        right: 12px;
+        background: rgba(74, 26, 10, 0.8);
+        color: #fff8e1;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 12px;
+        font-weight: 600;
       }
 
       /* ── FOOTER ──────────────────────────────── */
       footer {
         background: var(--brown);
-        color: #e8c97a;
+        color: #fff8e1;
         text-align: center;
-        padding: 28px 20px;
-        font-size: 13px;
+        padding: 30px 20px;
+        margin-top: 60px;
+        border-top: 2px solid var(--gold);
       }
-      footer .footer-name {
-        font-family: "Playfair Display", serif;
-        font-size: 18px;
-        margin-bottom: 4px;
+
+      footer p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 8px;
       }
-      footer a {
-        color: #e8c97a;
-        text-decoration: none;
+
+      footer .footer-ornament {
+        color: var(--gold);
+        font-size: 16px;
+        margin: 12px 0;
+        letter-spacing: 4px;
       }
-      footer a:hover {
-        text-decoration: underline;
-      }
-      footer .footer-links {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 10px;
-        flex-wrap: wrap;
-      }
-      footer .gold-line {
-        height: 1px;
-        background: var(--gold);
-        opacity: 0.3;
-        margin: 12px auto;
-        max-width: 200px;
+
+      /* ── RESPONSIVE ──────────────────────────── */
+      @media (max-width: 768px) {
+        header .tagline {
+          font-size: 13px;
+        }
+
+        header .subtitle {
+          font-size: 11px;
+          letter-spacing: 1px;
+        }
+
+        .intro-section h1 {
+          font-size: 24px;
+        }
+
+        .intro-section p {
+          font-size: 14px;
+        }
+
+        .timeline-year h2 {
+          font-size: 22px;
+        }
+
+        .event-title {
+          font-size: 18px;
+        }
+
+        .carousel-slide img {
+          height: 300px;
+        }
+
+        .timeline-events {
+          padding-left: 30px;
+        }
+
+        .event::before {
+          left: -25px;
+        }
+
+        .carousel-nav {
+          width: 36px;
+          height: 36px;
+          font-size: 18px;
+        }
       }
 
       @media (max-width: 480px) {
-        .grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 12px;
+        main {
+          padding: 20px 12px 40px;
         }
-        .filter-groups {
-          gap: 6px;
+
+        .intro-section h1 {
+          font-size: 20px;
         }
-        .chip {
-          font-size: 12px;
-          padding: 4px 10px;
+
+        .intro-section p {
+          font-size: 13px;
         }
+
+        .timeline-year h2 {
+          font-size: 18px;
+          padding: 0 12px;
+        }
+
+        .timeline-year h2::before,
+        .timeline-year h2::after {
+          margin: 0 4px;
+        }
+
+        .event-title {
+          font-size: 16px;
+        }
+
+        .carousel-slide img {
+          height: 250px;
+        }
+
+        .carousel-nav {
+          width: 32px;
+          height: 32px;
+          font-size: 16px;
+        }
+
+        .carousel-nav.prev {
+          left: 6px;
+        }
+
+        .carousel-nav.next {
+          right: 6px;
+        }
+      }
+
+      .top-nav {
+        margin-top: 16px;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .top-nav a {
+        text-decoration: none;
+        color: #fff8e1;
+        background: var(--brown);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid var(--gold);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .top-nav a:hover {
+        background: var(--red-accent);
       }
     </style>
   </head>
-  <body>
-    <div class="kolam-top"></div>
 
+  <body>
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- HEADER -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <div class="kolam-top"></div>
     <header>
       <img
         class="logo"
@@ -686,539 +539,586 @@
         alt="Dee Decors Logo"
         onerror="this.style.display = 'none'"
       />
-      <div class="header-ornament">✦ ✦ ✦</div>
-      <p class="tagline">Where art meets culture</p>
-      <p class="subtitle">Handcrafted Indian Treasures</p>
+      <p class="header-ornament">✦ ✦ ✦</p>
+      <p class="subtitle">My Journey as a Kolam Artist</p>
+      <div class="top-nav">
+        <a href="dee_decors_catalog.html">Catalog</a
+        ><a href="dee_decors_journey.html">Journey</a>
+      </div>
     </header>
 
-    <!-- FILTER BAR -->
-    <div class="filter-bar">
-      <div class="filter-label">Browse by</div>
-      <div class="filter-groups">
-        <!-- Category -->
-        <button
-          class="chip active"
-          onclick="setFilter('category', 'all', this)"
-        >
-          All items
-        </button>
-        <button class="chip" onclick="setFilter('category', 'home', this)">
-          Home Decor
-        </button>
-        <button class="chip" onclick="setFilter('category', 'return', this)">
-          Return Gifts
-        </button>
-        <button class="chip" onclick="setFilter('category', 'pooja', this)">
-          Pooja Room
-        </button>
-        <button class="chip" onclick="setFilter('category', 'gift', this)">
-          Personalized Gifts
-        </button>
-
-        <div class="filter-divider"></div>
-
-        <!-- Price -->
-        <button class="chip price" onclick="setFilter('price', 'all', this)">
-          Any price
-        </button>
-        <button class="chip price" onclick="setFilter('price', '25', this)">
-          Under $25
-        </button>
-        <button class="chip price" onclick="setFilter('price', '50', this)">
-          Under $50
-        </button>
-        <button class="chip price" onclick="setFilter('price', '100', this)">
-          Under $100
-        </button>
-      </div>
-    </div>
-
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- MAIN CONTENT -->
+    <!-- ═══════════════════════════════════════════════════════ -->
     <main>
-      <div class="section-header">
-        <span class="section-badge">Our Products</span>
-        <div class="results-count" id="results-count"></div>
-      </div>
-      <div class="grid" id="product-grid"></div>
+      <section class="intro-section">
+        <h1>The Journey of Dee Decors</h1>
+        <p>Reviving Tradition, Inspiring Community</p>
+        <p style="margin-top: 20px; font-size: 15px">
+          What started as a personal passion project in May 2025 has grown into
+          a vibrant cultural movement. Whether through a hand-painted coaster, a
+          gallery floor piece, or a community canvas, my goal remains unchanged:
+          to honor the math, beauty, and spirit of traditional art, and to share
+          that joy with the world.
+        </p>
+      </section>
+
+      <section class="timeline">
+        <!-- ═════════════════════════════════════════════ -->
+        <!-- 2025: GROUNDING THE ROOTS -->
+        <!-- ═════════════════════════════════════════════ -->
+        <div class="timeline-year">
+          <h2>2025</h2>
+        </div>
+        <p
+          style="
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 30px;
+            font-size: 14px;
+          "
+        >
+          Grounding the Roots & Finding My Community
+        </p>
+
+        <div class="timeline-events">
+          <!-- Event 1 -->
+          <div class="event">
+            <div class="event-date">May 4, 2025</div>
+            <div class="event-title">Founding Dee Decors</div>
+            <div class="event-location">The Beginning</div>
+            <div class="event-description">
+              I took a leap of faith and founded Dee Decors, officializing my
+              journey as a creative entrepreneur. My mission was clear yet
+              deeply personal: to breathe new life into Kolam, a traditional
+              South Indian geometric art form that has always held a sacred
+              space in my heart.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-1">
+                <div class="carousel-slide active placeholder">
+                  <span>Add your photos here for the founding moment</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-1"></div>
+              <div class="carousel-counter" id="counter-1">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="event">
+            <div class="event-date">June 28 & 29, 2025</div>
+            <div class="event-title">First Vendor Stall</div>
+            <div class="event-location">
+              Bothell Hindu Temple & Cultural Center
+            </div>
+            <div class="event-description">
+              I debuted my very first vendor stall. It felt incredibly blessed
+              and auspicious to start this entrepreneurial path in a space
+              rooted in culture. The overwhelming warmth and support from the
+              community validated my vision and filled me with pride for keeping
+              this cultural connection alive.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-2">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from your first stall</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-2"></div>
+              <div class="carousel-counter" id="counter-2">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="event">
+            <div class="event-date">August 3, 2025</div>
+            <div class="event-title">Grand Summer Mela</div>
+            <div class="event-location">Community Summer Market</div>
+            <div class="event-description">
+              Building on my initial momentum, this summer stall allowed me to
+              expand my reach, introduce my hand-crafted pieces to new
+              audiences, and build lasting community connections.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-3">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from the Grand Summer Mela</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-3"></div>
+              <div class="carousel-counter" id="counter-3">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="event">
+            <div class="event-date">August 9, 2025</div>
+            <div class="event-title">Utsav Mela</div>
+            <div class="event-location">Marymoor Park, Redmond</div>
+            <div class="event-description">
+              Positioned near India's Independence Day, this vibrant,
+              celebration-filled mela was an exhilarating experience. The
+              festive energy perfectly matched the joyful spirit of my colorful
+              decor items.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-4">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Utsav Mela</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-4"></div>
+              <div class="carousel-counter" id="counter-4">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="event">
+            <div class="event-date">September 20, 2025</div>
+            <div class="event-title">SeaTac Community Center Stall</div>
+            <div class="event-location">SeaTac Community Center</div>
+            <div class="event-description">
+              Immersing myself in a new local hub gave me fresh perspectives.
+              Participating in this community-centric event emphasized the
+              universal appeal of geometric symmetry.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-5">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from SeaTac Community Center</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-5"></div>
+              <div class="carousel-counter" id="counter-5">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="event">
+            <div class="event-date">October 4, 2025</div>
+            <div class="event-title">Festival of Lights</div>
+            <div class="event-location">Tacoma</div>
+            <div class="event-description">
+              This multicultural festival was a major milestone. I was given the
+              platform to speak publicly about the history, meaning, and
+              cultural storytelling behind Kolam. Watching people from diverse
+              backgrounds connect with the art form was an immensely proud
+              moment.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-6">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Festival of Lights</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-6"></div>
+              <div class="carousel-counter" id="counter-6">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 7 -->
+          <div class="event">
+            <div class="event-date">October 11, 2025</div>
+            <div class="event-title">Diwali Mela</div>
+            <div class="event-location">North Creek High School</div>
+            <div class="event-description">
+              Organized by the Washington Indian Association (WAIA), this
+              bustling holiday market allowed me to share festive decor with
+              families celebrating the season of lights.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-7">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Diwali Mela</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-7"></div>
+              <div class="carousel-counter" id="counter-7">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 8 -->
+          <div class="event">
+            <div class="event-date">November 22, 2025</div>
+            <div class="event-title">Holiday Market</div>
+            <div class="event-location">Samena Club, Bellevue</div>
+            <div class="event-description">
+              Closing out my first year, this winter market introduced Dee
+              Decors to the Eastside holiday shopping crowd, establishing my
+              handcrafted art as unique, meaningful gifts.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-8">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Holiday Market</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-8"></div>
+              <div class="carousel-counter" id="counter-8">1/1</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ═════════════════════════════════════════════ -->
+        <!-- 2026: ELEVATING THE CRAFT -->
+        <!-- ═════════════════════════════════════════════ -->
+        <div class="timeline-year">
+          <h2>2026</h2>
+        </div>
+        <p
+          style="
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 30px;
+            font-size: 14px;
+          "
+        >
+          Elevating the Craft, Teaching, and Recognition
+        </p>
+
+        <div class="timeline-events">
+          <!-- Event 9 -->
+          <div class="event">
+            <div class="event-date">January 18, 2026</div>
+            <div class="event-title">Free Kolam Workshop</div>
+            <div class="event-location">Bellevue Library</div>
+            <div class="event-description">
+              In collaboration with a fellow artist, I realized a long-held
+              dream: teaching the community how to draw traditional Kolam on the
+              floor using rice flour. Watching participants connect with the
+              tactile, meditative process of the art form was incredibly
+              fulfilling.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-9">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Kolam Workshop</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-9"></div>
+              <div class="carousel-counter" id="counter-9">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 10 -->
+          <div class="event">
+            <div class="event-date">February 2 & 3, 2026</div>
+            <div class="event-title">Cultural Exhibition</div>
+            <div class="event-location">ARTS @ King Street Station Gallery</div>
+            <div class="event-description">
+              I had the honor of contributing to a major Kolam exhibition. I
+              fabricated custom Kolam panels for the display and provided
+              extensive, hands-on assistance in executing a massive, live Kolam
+              directly on the gallery floor.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-10">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Cultural Exhibition</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-10"></div>
+              <div class="carousel-counter" id="counter-10">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 11 -->
+          <div class="event">
+            <div class="event-date">February 12, 2026</div>
+            <div class="event-title">Exhibition Workshop</div>
+            <div class="event-location">ARTS @ King Street Station</div>
+            <div class="event-description">
+              To deepen public engagement with the gallery exhibit, I co-led an
+              immersive workshop. It was a beautiful opportunity to elevate
+              Kolam to a contemporary gallery space while passing the tradition
+              down to the next generation.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-11">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Exhibition Workshop</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-11"></div>
+              <div class="carousel-counter" id="counter-11">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 12 -->
+          <div class="event">
+            <div class="event-date">February 21, 2026</div>
+            <div class="event-title">Youth Outreach</div>
+            <div class="event-location">Jing Mei Elementary School</div>
+            <div class="event-description">
+              I brought a hands-on Kolam experience to young students using
+              floorboards. The children and their parents were deeply engaged,
+              showing immense curiosity and joy as they mapped out the intricate
+              patterns themselves.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-12">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Youth Outreach</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-12"></div>
+              <div class="carousel-counter" id="counter-12">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 13 -->
+          <div class="event">
+            <div class="event-date">March 28, 2026</div>
+            <div class="event-title">Dot Mandala Exhibition</div>
+            <div class="event-location">Renton Technical College</div>
+            <div class="event-description">
+              I expanded my public artistic showcase by exhibiting my
+              specialized Dot Mandala art pieces, connecting with a diverse
+              academic and local audience.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-13">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Dot Mandala Exhibition</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-13"></div>
+              <div class="carousel-counter" id="counter-13">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 14 -->
+          <div class="event">
+            <div class="event-date">May 9, 2026</div>
+            <div class="event-title">Mother's Day Dot Mandala Art Lounge</div>
+            <div class="event-location">Bothell Schoolhouse</div>
+            <div class="event-description">
+              I hosted my very first independent, in-person Art Lounge. It was a
+              magical day where mothers and families came together to relax and
+              intuitively create their own beautiful dot mandalas to take home.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-14">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Art Lounge</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-14"></div>
+              <div class="carousel-counter" id="counter-14">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 15 -->
+          <div class="event">
+            <div class="event-date">May 9, 2026</div>
+            <div class="event-title">SWECHA Award for Women Entrepreneurs</div>
+            <div class="event-location">City of Bothell</div>
+            <div class="event-description">
+              On the exact same day as my Art Lounge, my dedication to culture
+              and business was recognized on a civic level. I was deeply honored
+              to receive the SWECHA Award for Women Entrepreneurs, presented by
+              the Swecha Organization in partnership with the City of Bothell.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-15">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from SWECHA Award ceremony</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-15"></div>
+              <div class="carousel-counter" id="counter-15">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 16 -->
+          <div class="event">
+            <div class="event-date">May 15, 2026</div>
+            <div class="event-title">Renton Art Walk</div>
+            <div class="event-location">
+              Shop of the Heart by Cristhal, Renton
+            </div>
+            <div class="event-description">
+              I proudly participated in my local art scene by featuring my work
+              at Shop of the Heart, collaborating with owner Cristhal to bring
+              traditional geometric art to downtown Renton.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-16">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Renton Art Walk</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-16"></div>
+              <div class="carousel-counter" id="counter-16">1/1</div>
+            </div>
+          </div>
+
+          <!-- Event 17 -->
+          <div class="event">
+            <div class="event-date">May 22–25, 2026</div>
+            <div class="event-title">Northwest Folklife Festival</div>
+            <div class="event-location">Seattle Center</div>
+            <div class="event-description">
+              Over this historic Memorial Day weekend festival, I participated
+              in two major capacities: conducting a two-day interactive Kolam
+              workshop in the Makerspace where participants of all ages learned
+              patterns and contributed to a Community Canvas, and having a
+              signature fine art piece selected for display at the International
+              Fountain Pavilion Gallery Showcase—a sophisticated fusion of Kolam
+              and Dot Art.
+            </div>
+            <div class="carousel-container">
+              <div class="carousel" id="carousel-17">
+                <div class="carousel-slide active placeholder">
+                  <span>Add photos from Northwest Folklife Festival</span>
+                </div>
+              </div>
+              <div class="carousel-indicators" id="indicators-17"></div>
+              <div class="carousel-counter" id="counter-17">1/1</div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <!-- MODAL -->
-    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
-      <div class="modal">
-        <div class="modal-top-bar"></div>
-        <button class="modal-close" onclick="closeModalBtn()">×</button>
-        <div class="modal-body">
-          <div class="modal-img-wrap" id="modal-img-wrap">
-            <span class="no-img-lg">🪔</span>
-          </div>
-          <div class="modal-info">
-            <span class="modal-category-badge" id="modal-cat"></span>
-            <h2 class="modal-name" id="modal-name"></h2>
-            <div class="modal-ornament">✦ ✦ ✦</div>
-            <p class="modal-desc" id="modal-desc"></p>
-            <div class="modal-price-row">
-              <span class="modal-price" id="modal-price"></span>
-              <span class="modal-price-note" id="modal-note"></span>
-            </div>
-            <div class="modal-actions" id="modal-actions"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FOOTER -->
+    <!-- ═══════════════════════════════════════════════════════ -->
     <footer>
-      <div class="footer-name">Dee Decors</div>
-      <div class="gold-line"></div>
-      <div>
-        Deepika Rajendran &nbsp;·&nbsp;
-        <a href="tel:4255246837">425-524-6837</a>
-      </div>
-      <div class="footer-links">
-        <a href="https://www.instagram.com/dee_decors_" target="_blank"
-          >📷 @dee_decors_</a
-        >
-        <a href="https://www.etsy.com/shop/DeeDecorsbyDeepika" target="_blank"
-          >🛍 DeeDecorsbyDeepika on Etsy</a
-        >
-      </div>
+      <p class="footer-ornament">✦ ✦ ✦</p>
+      <p><strong>Dee Decors</strong></p>
+      <p>Reviving tradition through handcrafted Kolam art</p>
+      <p style="margin-top: 16px; font-size: 12px">
+        Thank you for being part of this beautiful journey.
+      </p>
     </footer>
 
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- JAVASCRIPT: CAROUSEL FUNCTIONALITY -->
+    <!-- ═══════════════════════════════════════════════════════ -->
     <script>
-      // ═══════════════════════════════════════════════════════
-      // PRODUCT LIST — Edit this section to add/update products
-      // ═══════════════════════════════════════════════════════
-      // Fields:
-      //   name       — product name (required)
-      //   category   — one of: "home" | "return" | "pooja" | "gift"
-      //   price      — number in dollars (required)
-      //   desc       — short description shown in modal
-      //   img        — URL or relative path to product photo (optional)
-      //   note       — extra note, e.g. "Bulk orders available" (optional)
-      //   whatsapp   — WhatsApp number, default is below
-      //   insta      — Instagram handle, default is below
-      // ═══════════════════════════════════════════════════════
-
-      const DEFAULT_WHATSAPP = "14255246837"; // US format, no + or spaces
-      const DEFAULT_INSTA = "dee_decors_";
-
-      const products = [
-        {
-          name: "Tamil Quote box (5x5 inch)",
-          category: "home",
-          price: 12,
-          desc: "A compact 5x5 inch wooden Tamil quote box featuring a clean white background, rich brown border, and brush‑colored Tamil words that add a warm, handcrafted charm. Perfect as a minimalist décor piece that brings cultural elegance and inspiration to any space.",
-          imgs: [
-            "pics/quotebox5in_1.jpg",
-            "pics/quotebox5in_2.jpg",
-            "pics/quotebox5in_3.jpg",
-            "pics/quotebox5in_4.jpg",
-            "pics/quotebox5in_5.jpg",
-            "pics/quotebox5in_6.jpg",
-            "pics/quotebox5in_7.jpg",
-            "pics/quotebox5in_8.jpg",
-          ],
-          note: "Custom quotes/sizes can be made upon request",
-        },
-        {
-          name: "Coasters",
-          category: "home",
-          price: 10,
-          desc: "Handcrafted coasters featuring warm, earthy shades paired with elegant geometric and floral patterns. A stylish blend of color and design that elevates any table setting.",
-          imgs: [
-            "pics/Coasters_1.jpg",
-            "pics/Coasters_2.jpg",
-            "pics/Coasters_3.jpg",
-            "pics/Coasters_4.jpg",
-          ],
-          note: "Custom order can be made upon request",
-        },
-        {
-          name: "Jharokha",
-          category: "home",
-          price: 15,
-          desc: "Handcrafted Jharokhas featuring warm, shiny mirror shades paired with elegant floral mirror patterns. A stylish blend of color and design that elevates any home setting.",
-          imgs: [
-            "pics/Jharokha_1.jpg",
-            "pics/Jharokha_2.jpg",
-            "pics/Jharokha_3.jpg",
-            "pics/Jharokha_4.jpg",
-            "pics/Jharokha_5.jpg",
-            "pics/Jharokha_6.jpg",
-          ],
-          note: "Custom order can be made upon request",
-        },
-        {
-          name: "Wall shelf (long)",
-          category: "home",
-          price: 35,
-          desc: "Hand‑crafted wooden décor with vibrant colors, mirror work shine, and traditional kolam‑inspired detailing. Wall‑mountable and sturdy enough to hold up to 0.5 lb, perfect for bells, candles, or small accents.",
-          img: "pics/wallshelf_1.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Wall shelf (long)",
-          category: "home",
-          price: 35,
-          desc: "Hand‑crafted wooden décor with vibrant colors, mirror work shine, and traditional kolam‑inspired detailing. Wall‑mountable and sturdy enough to hold up to 0.5 lb, perfect for bells, candles, or small accents.",
-          img: "pics/wallshelf_2.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Wall shelf (long)",
-          category: "home",
-          price: 35,
-          desc: "Hand‑crafted wooden décor with vibrant colors, mirror work shine, and traditional kolam‑inspired detailing. Wall‑mountable and sturdy enough to hold up to 0.5 lb, perfect for bells, candles, or small accents.",
-          img: "pics/wallshelf_3.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Kolam tray (small)",
-          category: "return",
-          price: 8,
-          desc: "Hand‑made wooden kolam plates with intricate designs and a polished coating for a bright, shiny finish. Perfect as pooja return gifts, adding a touch of tradition and elegance to any celebration.",
-          img: "pics/kolamplate_1.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Kolam tray (large)",
-          category: "return",
-          price: 9,
-          desc: "Hand‑made wooden kolam plates with intricate designs and a polished coating for a bright, shiny finish. Perfect as pooja return gifts, adding a touch of tradition and elegance to any celebration.",
-          img: "pics/kolamplate_1.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Round wall shelf",
-          category: "home",
-          price: 30,
-          desc: "Hand‑crafted 9‑inch wooden décor featuring intricate kolam design and mirror work, finished with a polished coating for a bright, shiny look. Wall‑mountable and sturdy enough to hold 0.5 lb, making it both decorative and functional.",
-          img: "pics/wallshelfround_1.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Round wall shelf",
-          category: "home",
-          price: 30,
-          desc: "Hand‑crafted 9‑inch wooden décor featuring intricate kolam design and mirror work, finished with a polished coating for a bright, shiny look. Wall‑mountable and sturdy enough to hold 0.5 lb, making it both decorative and functional.",
-          img: "pics/wallshelfround_2.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Round wall shelf",
-          category: "home",
-          price: 30,
-          desc: "Hand‑crafted 9‑inch wooden décor featuring intricate kolam design and mirror work, finished with a polished coating for a bright, shiny look. Wall‑mountable and sturdy enough to hold 0.5 lb, making it both decorative and functional.",
-          img: "pics/wallshelfround_3.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (12 x 18 inch)",
-          category: "pooja",
-          price: 45,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/manai_1.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Table coasters and tray",
-          category: "return",
-          price: 60,
-          desc: "Hand‑crafted table coaster and tray set featuring intricate kolam artwork for a refined, traditional touch. Finished in a crisp white tone, perfect for elevating everyday use or festive serving.",
-          img: "pics/tableset_1.jpg",
-          note: "Price per set",
-        },
-        {
-          name: "Home themed quote plaques",
-          category: "gift",
-          price: 25,
-          desc: "Hand‑crafted wooden home décor plaques enhanced with precision vinyl‑cut words and a smooth protective coating for a shiny, polished finish. Lightweight and wall‑mountable, they bring a warm, welcoming touch to any space with lasting durability.",
-          imgs: [
-            "pics/homesign_1.jpg",
-            "pics/homesign_2.jpg",
-            "pics/homesign_3.jpg",
-            "pics/homesign_4.jpg",
-          ],
-          note: "Price per set",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 40,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_1.jpg",
-          note: "Price per set",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 27,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_2.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 27,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_3.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 27,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_4.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 27,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_5.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 27,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_6.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 27,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_7.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 40,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_8.jpg",
-          note: "Price per set",
-        },
-        {
-          name: "Pooja Manai / Peetham (~11 x 8 inch)",
-          category: "pooja",
-          price: 40,
-          desc: "Hand‑crafted wooden pooja manai featuring intricate kolam design and a protective coating that resists oil spills. Perfect for placing idols, offering both beauty and durability in daily rituals.",
-          img: "pics/smallmanai_9.jpg",
-          note: "Price per set",
-        },
-        {
-          name: "Welcome home sign wall mount",
-          category: "gift",
-          price: 40,
-          desc: "Hand‑crafted wooden welcome plaque featuring elegant hand‑written lettering and detailed artwork, sealed with a glossy protective coat for a shiny finish. Lightweight and easy to wall‑mount, it brings a warm, inviting touch to any entryway or living space.",
-          img: "pics/welcome_1.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Welcome home sign wall mount",
-          category: "gift",
-          price: 40,
-          desc: "Hand‑crafted wooden welcome plaque featuring elegant hand‑written lettering and detailed artwork, sealed with a glossy protective coat for a shiny finish. Lightweight and easy to wall‑mount, it brings a warm, inviting touch to any entryway or living space.",
-          img: "pics/welcome_2.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Welcome home sign wall mount",
-          category: "gift",
-          price: 40,
-          desc: "Hand‑crafted wooden welcome plaque featuring elegant hand‑written lettering and detailed artwork, sealed with a glossy protective coat for a shiny finish. Lightweight and easy to wall‑mount, it brings a warm, inviting touch to any entryway or living space.",
-          img: "pics/welcome_4.jpg",
-          note: "Price per piece",
-        },
-        {
-          name: "Welcome home sign wall mount",
-          category: "gift",
-          price: 45,
-          desc: "Hand‑crafted wooden welcome plaque with slab featuring intricate artwork and hand‑written lettering, finished with a glossy protective coat for a shiny look. Designed with a small platform that can hold up to 0.5 lb, perfect for placing small décor accents.",
-          img: "pics/welcome_3.jpg",
-          note: "Price per piece",
-        },
-      ];
-
-      // ═══════════════════════════════════════════════════════
-
-      const CATEGORY_LABELS = {
-        home: "Home Decor",
-        return: "Return Gift",
-        pooja: "Pooja Room",
-        gift: "Personalized Gift",
+      // Initialize carousels for all events
+      const carouselData = {
+        "carousel-1": [],
+        "carousel-2": [],
+        "carousel-3": [],
+        "carousel-4": [],
+        "carousel-5": [],
+        "carousel-6": [],
+        "carousel-7": [],
+        "carousel-8": [],
+        "carousel-9": [],
+        "carousel-10": [],
+        "carousel-11": [],
+        "carousel-12": [],
+        "carousel-13": [],
+        "carousel-14": [],
+        "carousel-15": [],
+        "carousel-16": [],
+        "carousel-17": [],
       };
 
-      let currentCategory = "all";
-      let currentPrice = "all";
+      const carouselState = {};
 
-      function renderGrid() {
-        const grid = document.getElementById("product-grid");
-        const visible = products.filter((p) => {
-          const catOk =
-            currentCategory === "all" || p.category === currentCategory;
-          const priceOk =
-            currentPrice === "all" || p.price < Number(currentPrice);
-          return catOk && priceOk;
-        });
+      // Initialize each carousel
+      Object.keys(carouselData).forEach((carouselId) => {
+        carouselState[carouselId] = {
+          currentIndex: 0,
+          images: carouselData[carouselId],
+        };
 
-        document.getElementById("results-count").textContent =
-          visible.length === products.length
-            ? `Showing all ${products.length} items`
-            : `Showing ${visible.length} of ${products.length} items`;
-
-        if (visible.length === 0) {
-          grid.innerHTML = `<div class="empty-state"><p>No items found</p><small>Try a different filter</small></div>`;
-          return;
-        }
-
-        grid.innerHTML = visible
-          .map((p, i) => {
-            const idx = products.indexOf(p);
-            return `
-    <div class="card" onclick="openModal(${idx})">
-      <div class="card-top"></div>
-      <div class="card-img-wrap">
-        ${
-          (Array.isArray(p.imgs) && p.imgs.length > 0) || p.img
-            ? `<img src="${Array.isArray(p.imgs) && p.imgs.length > 0 ? p.imgs[0] : p.img}" alt="${p.name}" onerror="this.parentElement.innerHTML='<span class=no-img>🪔</span>'">`
-            : `<span class="no-img">🪔</span>`
-        }
-        <span class="card-category">${CATEGORY_LABELS[p.category] || p.category}</span>
-      </div>
-      <div class="card-body">
-        <div class="card-name">${p.name}</div>
-        <div class="card-desc">${p.desc}</div>
-        <div class="card-footer">
-          <span class="card-price">$${p.price}</span>
-          <button class="card-btn">Inquire</button>
-        </div>
-      </div>
-    </div>`;
-          })
-          .join("");
-      }
-
-      function setFilter(type, value, btn) {
-        if (type === "category") {
-          currentCategory = value;
-          document
-            .querySelectorAll(".chip:not(.price)")
-            .forEach((b) => b.classList.remove("active"));
-        } else {
-          currentPrice = value;
-          document
-            .querySelectorAll(".chip.price")
-            .forEach((b) => b.classList.remove("active"));
-        }
-        btn.classList.add("active");
-        renderGrid();
-      }
-
-      // Carousel state
-      let carouselIdx = 0;
-      let carouselImages = [];
-
-      function openModal(idx) {
-        const p = products[idx];
-        document.getElementById("modal-cat").textContent =
-          CATEGORY_LABELS[p.category] || p.category;
-        document.getElementById("modal-name").textContent = p.name;
-        document.getElementById("modal-desc").textContent = p.desc;
-        document.getElementById("modal-price").textContent = "$" + p.price;
-        document.getElementById("modal-note").textContent = p.note || "";
-
-        // Build carousel - support both single img (string) and multiple imgs (array)
-        carouselIdx = 0;
-        carouselImages = [];
-        if (Array.isArray(p.imgs) && p.imgs.length > 0) {
-          carouselImages = p.imgs;
-        } else if (p.img) {
-          carouselImages = [p.img];
-        }
-
-        const imgWrap = document.getElementById("modal-img-wrap");
-        if (carouselImages.length === 0) {
-          imgWrap.innerHTML = `<span class="no-img-lg">🪔</span>`;
-        } else if (carouselImages.length === 1) {
-          imgWrap.innerHTML = `<div class="carousel"><div class="carousel-slide active"><img src="${carouselImages[0]}" alt="${p.name}" onerror="this.src='';this.parentElement.innerHTML='<span class=no-img-lg>🪔</span>'"></div></div>`;
-        } else {
-          const slides = carouselImages
-            .map(
-              (src, i) =>
-                `<div class="carousel-slide${i === 0 ? " active" : ""}" data-i="${i}"><img src="${src}" alt="${p.name} ${i + 1}" onerror="this.src='';this.style.display='none'"></div>`,
-            )
-            .join("");
-          const dots = carouselImages
-            .map(
-              (_, i) =>
-                `<button class="carousel-dot${i === 0 ? " active" : ""}" onclick="goSlide(${i})"></button>`,
-            )
-            .join("");
-          imgWrap.innerHTML = `
-      <div class="carousel" id="carousel">
-        ${slides}
-        <button class="carousel-btn prev" onclick="prevSlide()">&#8249;</button>
-        <button class="carousel-btn next" onclick="nextSlide()">&#8250;</button>
-      </div>
-      <div class="carousel-dots">${dots}</div>`;
-        }
-
-        const wa = p.whatsapp || DEFAULT_WHATSAPP;
-        const ig = p.insta || DEFAULT_INSTA;
-        const msg = encodeURIComponent(
-          `Hi Deepika! I'm interested in "${p.name}" ($${p.price}). Could you please share more details?`,
+        const carousel = document.getElementById(carouselId);
+        const indicatorsContainer = document.getElementById(
+          `indicators-${carouselId.split("-")[1]}`,
+        );
+        const counterElement = document.getElementById(
+          `counter-${carouselId.split("-")[1]}`,
         );
 
-        document.getElementById("modal-actions").innerHTML = `
-    <a class="btn-primary" href="https://wa.me/${wa}?text=${msg}" target="_blank">
-      💬 Message on WhatsApp
-    </a>
-    <a class="btn-secondary" href="https://www.instagram.com/${ig}" target="_blank">
-      📷 DM on Instagram
-    </a>
-  `;
+        // Create navigation buttons
+        const prevBtn = document.createElement("button");
+        prevBtn.className = "carousel-nav prev";
+        prevBtn.innerHTML = "❮";
+        prevBtn.onclick = () => changeSlide(carouselId, -1);
+        carousel.parentElement.appendChild(prevBtn);
 
-        document.getElementById("modal").classList.add("open");
-        document.body.style.overflow = "hidden";
-      }
+        const nextBtn = document.createElement("button");
+        nextBtn.className = "carousel-nav next";
+        nextBtn.innerHTML = "❯";
+        nextBtn.onclick = () => changeSlide(carouselId, 1);
+        carousel.parentElement.appendChild(nextBtn);
 
-      function goSlide(n) {
-        carouselIdx = n;
-        document
-          .querySelectorAll(".carousel-slide")
-          .forEach((s, i) => s.classList.toggle("active", i === n));
-        document
-          .querySelectorAll(".carousel-dot")
-          .forEach((d, i) => d.classList.toggle("active", i === n));
-      }
-      function nextSlide() {
-        goSlide((carouselIdx + 1) % carouselImages.length);
-      }
-      function prevSlide() {
-        goSlide(
-          (carouselIdx - 1 + carouselImages.length) % carouselImages.length,
-        );
-      }
-
-      function closeModal(e) {
-        if (e.target === document.getElementById("modal")) closeModalBtn();
-      }
-      function closeModalBtn() {
-        document.getElementById("modal").classList.remove("open");
-        document.body.style.overflow = "";
-      }
-
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") closeModalBtn();
+        updateCarouselDisplay(carouselId);
       });
 
-      renderGrid();
+      function changeSlide(carouselId, direction) {
+        const state = carouselState[carouselId];
+        if (state.images.length === 0) return;
+
+        state.currentIndex =
+          (state.currentIndex + direction + state.images.length) %
+          state.images.length;
+        updateCarouselDisplay(carouselId);
+      }
+
+      function updateCarouselDisplay(carouselId) {
+        const state = carouselState[carouselId];
+        const carousel = document.getElementById(carouselId);
+        const slides = carousel.querySelectorAll(".carousel-slide");
+        const indicatorsContainer = document.getElementById(
+          `indicators-${carouselId.split("-")[1]}`,
+        );
+        const counterElement = document.getElementById(
+          `counter-${carouselId.split("-")[1]}`,
+        );
+
+        // Hide all slides
+        slides.forEach((slide) => slide.classList.remove("active"));
+
+        // Update counter and indicators
+        if (state.images.length > 0) {
+          slides[state.currentIndex].classList.add("active");
+
+          // Update indicators
+          indicatorsContainer.innerHTML = "";
+          state.images.forEach((_, index) => {
+            const indicator = document.createElement("div");
+            indicator.className = `indicator${index === state.currentIndex ? " active" : ""}`;
+            indicator.onclick = () => {
+              state.currentIndex = index;
+              updateCarouselDisplay(carouselId);
+            };
+            indicatorsContainer.appendChild(indicator);
+          });
+
+          // Update counter
+          if (counterElement) {
+            counterElement.textContent = `${state.currentIndex + 1}/${state.images.length}`;
+          }
+        }
+
+        // Show/hide nav buttons based on image count
+        const carouselContainer = carousel.parentElement;
+        const navButtons = carouselContainer.querySelectorAll(".carousel-nav");
+        navButtons.forEach((btn) => {
+          btn.style.display = state.images.length > 1 ? "flex" : "none";
+        });
+      }
+
+      // ═══════════════════════════════════════════════════════
+      // CACHE BUSTING
+      // ═══════════════════════════════════════════════════════
+      const CACHE_KEY = "dee_decors_journey_version";
+      const currentVersion = new Date().toISOString().split("T")[0];
+      const lastVersion = localStorage.getItem(CACHE_KEY);
+
+      if (lastVersion && lastVersion !== currentVersion) {
+        localStorage.setItem(CACHE_KEY, currentVersion);
+        location.reload(true);
+      } else {
+        localStorage.setItem(CACHE_KEY, currentVersion);
+      }
     </script>
   </body>
 </html>
