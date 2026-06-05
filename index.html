@@ -337,6 +337,9 @@
         transition:
           transform 0.2s ease,
           box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
       }
       .card:hover {
         transform: translateY(-4px);
@@ -389,6 +392,9 @@
 
       .card-body {
         padding: 14px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
       }
       .card-name {
         font-family: "Playfair Display", serif;
@@ -403,22 +409,28 @@
         color: var(--muted);
         margin-bottom: 10px;
         line-height: 1.4;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex-grow: 1;
       }
 
       .card-footer {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         gap: 8px;
+        margin-top: auto;
       }
       .card-price {
         font-family: "Playfair Display", serif;
         font-size: 16px;
         font-weight: 600;
         color: var(--red-accent);
+        white-space: nowrap;
       }
       .card-btn {
-        flex: 1;
         padding: 6px 12px;
         background: var(--brown);
         color: #fff8e1;
@@ -430,6 +442,8 @@
         text-transform: uppercase;
         cursor: pointer;
         transition: background 0.2s ease;
+        white-space: nowrap;
+        margin-left: auto;
       }
       .card-btn:hover {
         background: var(--red-accent);
