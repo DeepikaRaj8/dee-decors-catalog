@@ -472,11 +472,10 @@
         flex-direction: column;
         background: #fff;
         border-radius: 4px;
-        overflow: hidden;
         max-width: 600px;
         width: 90%;
         max-height: 85vh;
-        overflow-y: auto;
+        overflow: hidden;
         position: relative;
       }
 
@@ -514,7 +513,8 @@
 
       .modal-img-wrap {
         width: 100%;
-        aspect-ratio: 1;
+        height: min(45vh, 400px);
+        flex-shrink: 0;
         background: linear-gradient(135deg, var(--cream2), var(--cream));
         display: flex;
         align-items: center;
@@ -604,6 +604,9 @@
 
       .modal-body {
         padding: 20px;
+        overflow-y: auto;
+        flex: 1 1 auto;
+        min-height: 0;
       }
       .modal-cat {
         font-size: 11px;
@@ -747,6 +750,9 @@
         .modal {
           width: 95%;
           max-height: 90vh;
+        }
+        .modal-img-wrap {
+          height: min(38vh, 320px);
         }
       }
 
