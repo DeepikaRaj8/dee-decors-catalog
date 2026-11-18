@@ -9,5 +9,7 @@ Desktop.ini
 # IDE
 .vscode/
 .idea/
+.kiro/
 
 add-product.html
+add-artwork.html

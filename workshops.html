@@ -144,6 +144,86 @@
         border-color: var(--gold2);
       }
 
+      /* ── NAVIGATION BUTTONS ──────────────────── */
+      .nav-button {
+        text-decoration: none;
+        color: #fff8e1;
+        background: var(--brown);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid var(--gold);
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: background 0.15s;
+        font-family: "Lato", sans-serif;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-button:hover {
+        background: var(--red-accent);
+      }
+
+      /* ── DROPDOWN CONTAINER ──────────────────– */
+      .nav-dropdown-container {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Dropdown Menu */
+      .nav-dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--cream2);
+        border: 1px solid var(--cream);
+        border-radius: 4px;
+        margin-top: 4px;
+        min-width: 180px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 150ms ease-out, 
+                    visibility 150ms ease-out,
+                    transform 150ms ease-out;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(74, 26, 10, 0.07);
+      }
+
+      .nav-dropdown-menu.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      /* Dropdown Items */
+      .dropdown-item {
+        display: block;
+        padding: 12px 16px;
+        color: var(--text);
+        text-decoration: none;
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        transition: background-color 150ms ease-out;
+        border-radius: 4px;
+        margin: 4px;
+      }
+
+      .dropdown-item:hover {
+        background-color: var(--gold2);
+      }
+
+      /* Dropdown Arrow Icon */
+      .dropdown-arrow {
+        transition: transform 150ms ease-out;
+      }
+
+      .nav-dropdown-container.active .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+
       /* ── SECTION BADGE ──────────────────────── */
       .section-badge {
         display: inline-block;
@@ -396,6 +476,21 @@
         <a href="./">Catalog</a>
         <a href="journey.html">Journey</a>
         <a href="workshops.html">Workshops</a>
+        <a href="about-artist.html">About Artist</a>
+        <div class="nav-dropdown-container">
+          <button class="nav-button art-works-toggle" aria-label="Toggle Art Works menu">
+            Art Works
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="16" height="16">
+              <path d="M7 10l5 5 5-5z" fill="currentColor"/>
+            </svg>
+          </button>
+          
+          <div class="nav-dropdown-menu" id="artWorksDropdown">
+            <!-- <a href="traditional-arts.html" class="dropdown-item">Traditional Arts</a>
+            <a href="pointilism.html" class="dropdown-item">Pointilism</a> -->
+            <a href="dot-mandala.html" class="dropdown-item">Dot Mandala</a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -529,7 +624,7 @@
         </div>
       </div> -->
 
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-top"></div>
         <div class="card-image">
           <img
@@ -551,11 +646,11 @@
           <a
             class="btn-primary"
             target="_blank"
-            href="https://www.eventbrite.com/e/dot-mandala-workshop-tickets-1991793712612"
+            href=""
             >Event Link</a
           >
         </div>
-      </div>
+      </div> -->
 
       <div class="upcoming">
         <div class="upcoming-top"></div>
@@ -584,5 +679,6 @@
         >
       </div>
     </footer>
+    <script src="js/navigation.js"></script>
   </body>
 </html>

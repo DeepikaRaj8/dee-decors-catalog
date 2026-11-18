@@ -1,0 +1,210 @@
+/* ── GALLERY STYLES ──────────────────────────── */
+
+/* Main content styling */
+.main-content {
+  background-color: var(--cream);
+  padding: 64px 16px;
+}
+
+/* Page heading */
+.page-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin: 0 0 48px 0;
+  line-height: 1.2;
+}
+
+/* Art entry styling */
+.art-entry {
+  background: white;
+  border: 1px solid var(--cream2);
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 24px;
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  box-shadow: var(--shadow-subtle);
+  border-top: 3px solid;
+  border-image: linear-gradient(to right, var(--brown), var(--gold), var(--brown)) 1;
+}
+
+.art-entry:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Image container */
+.art-entry-image-wrapper {
+  flex: 0 0 45%;
+  overflow: hidden;
+  background-color: var(--cream2);
+  height: 280px;
+}
+
+.art-entry-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Details container */
+.art-entry-details {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title */
+.art-entry-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 12px 0;
+  line-height: 1.2;
+}
+
+/* Description */
+.art-entry-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 16px 0;
+}
+
+/* Metadata */
+.art-entry-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta-item {
+  display: flex;
+  gap: 8px;
+}
+
+.meta-label {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  min-width: 100px;
+}
+
+.meta-value {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: var(--text);
+}
+
+/* About Artist page - Artist section */
+.artist-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Artist content layout */
+.artist-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Artist image */
+.artist-image-wrapper {
+  position: relative;
+}
+
+.artist-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border: 1px solid var(--cream2);
+  border-radius: 4px;
+}
+
+/* Biography text */
+.artist-biography {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.bio-section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+}
+
+.bio-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Image error state */
+.image-error {
+  opacity: 0.5;
+  background-color: var(--cream2);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 32px 16px;
+  }
+  
+  .page-heading {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+  
+  .art-entry {
+    flex-direction: column;
+  }
+  
+  .art-entry-image-wrapper {
+    flex: 0 0 auto;
+    width: 100%;
+    height: 200px;
+  }
+  
+  .art-entry-details {
+    padding: 16px;
+  }
+  
+  .art-entry-title {
+    font-size: 20px;
+  }
+  
+  .art-entry-description {
+    font-size: 14px;
+  }
+  
+  .artist-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  .bio-section-heading {
+    font-size: 24px;
+  }
+  
+  .bio-text {
+    font-size: 14px;
+  }
+}
